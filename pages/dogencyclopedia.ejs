@@ -1,0 +1,42 @@
+<!-- dogencyclopedia.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Encyclopedia Page</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/noticeboard">noticeboard</a></li>
+                <li><a href="/trainers">Trainers</a></li>
+                <li><a href="/myinfo">My Info</a></li>
+                <li><a href="/dogencyclopedia">Dog Encyclopedia</a></li>
+                <li><a href="/adoption">Adoption</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Dog Encyclopedia Page</h1>
+
+    <div class="content">
+        <h2>Dog Encyclopedia</h2>
+        <table>
+            <tr>
+                <th>Name</th>
+            </tr>
+            <% dogEncyclopedias.forEach((dogEncyclopedia) => { %>
+                <tr>
+                    <td><%= dogEncyclopedia.name %></td>
+                </tr>
+            <% }); %>
+        </table>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!-- myinfo.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Info Page</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/noticeboard">noticeboard</a></li>
+                <li><a href="/trainers">Trainers</a></li>
+                <li><a href="/myinfo">My Info</a></li>
+                <li><a href="/dogencyclopedia">Dog Encyclopedia</a></li>
+                <li><a href="/adoption">Adoption</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <h1>My Info Page</h1>
+
+    <div class="content">
+        <h2>My Info</h2>
+        <table>
+            <tr>
+                <th>Name</th>
+            </tr>
+            <% myInfos.forEach((myInfo) => { %>
+                <tr>
+                    <td><%= myInfo.name %></td>
+                </tr>
+            <% }); %>
+        </table>
+    </div>
+
+</body>
+</html>
